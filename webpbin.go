@@ -14,7 +14,7 @@ import (
 )
 
 var skipDownload bool
-var dest = ".bin/webp"
+var dest = "/home/wabot/libwebp-1.2.4-linux-x86-64/bin"
 var libwebpVersion = "1.2.0"
 
 type OptionFunc func(binWrapper *binwrapper.BinWrapper) error
