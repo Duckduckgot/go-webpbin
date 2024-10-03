@@ -12,7 +12,8 @@ import (
 type IWebP struct {
 	*binwrapper.BinWrapper
 	input  io.Reader
-	input2 io.Reader
+	inputFile  string
+	inputFile2  string
 	output io.Writer
 }
 
