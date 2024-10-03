@@ -7,7 +7,7 @@ import (
 	"github.com/Duckduckgot/go-binwrapper"
 )
 
-// GWebP compresses an image using the WebP format. Input format can be either PNG, JPEG, TIFF, WebP or raw Y'CbCr samples.
+// IWebP compresses an image using the WebP format. Input format can be either PNG, JPEG, TIFF, WebP or raw Y'CbCr samples.
 // https://developers.google.com/speed/webp/docs/cwebp
 type IWebP struct {
 	*binwrapper.BinWrapper
@@ -17,7 +17,7 @@ type IWebP struct {
 	output io.Writer
 }
 
-// NewIWebP creates new GWebP instance.
+// NewIWebP creates new IWebP instance.
 func NewIWebP(optionFuncs ...OptionFunc) *IWebP {
 	bin := &IWebP{
 		BinWrapper: createBinWrapper(optionFuncs...),
@@ -27,7 +27,7 @@ func NewIWebP(optionFuncs ...OptionFunc) *IWebP {
 	return bin
 }
 
-// Version returns GWebP version.
+// Version returns img2WebP version.
 func (c *IWebP) Version() (string, error) {
 	return version(c.BinWrapper)
 }
