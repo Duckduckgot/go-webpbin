@@ -36,7 +36,6 @@ func (c *IWebP) Version() (string, error) {
 // InputFile or InputImage called before will be ignored.
 func (c *IWebP) Input(reader, reader2 io.Reader) *IWebP {
 	c.input = reader
-	c.input2 = reader2
 	return c
 }
 
