@@ -64,7 +64,7 @@ func (c *IWebP) Run() error {
 		return err
 	}
 
-	c.Arg("-loop", "0").Arg("-lossy", "")
+	c.Arg("-loop", "0").Arg("-lossy")
 
 	err = c.setInput()
 
@@ -74,7 +74,7 @@ func (c *IWebP) Run() error {
 
 	// c.Arg("-o", output)
 
-	c.Arg("-", "")
+	c.Arg("-")
 	if c.output != nil {
 		c.SetStdOut(c.output)
 	}
