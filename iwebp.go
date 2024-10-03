@@ -92,11 +92,11 @@ func (c *IWebP) Run() error {
 func (c *IWebP) setInput() error {
 	if c.input != nil {
 		c.Arg("-d").Arg("5000")
-		c.Arg("--").Arg("-")
+		c.Arg("-")
 		c.StdIn(c.input)
 		if c.input2 != nil {
 			c.Arg("-d").Arg("3000")
-			c.Arg("--").Arg("-")
+			c.Arg("-")
 			c.StdIn(c.input2)
 		}
 	} else if c.inputFile != "" {
