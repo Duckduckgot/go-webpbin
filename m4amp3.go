@@ -16,7 +16,7 @@ type Mp4mp3 struct {
 	output     io.Writer
 }
 
-// NewCWebP creates new Mp4mp3 instance.
+// NewMp4mp3 creates new Mp4mp3 instance.
 func NewMp4mp3(optionFuncs ...OptionFunc) *Mp4mp3 {
 	bin := &Mp4mp3{
 		BinWrapper: createBinWrapper(optionFuncs...),
