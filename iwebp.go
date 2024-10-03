@@ -74,6 +74,7 @@ func (c *IWebP) Run() error {
 
 	// c.Arg("-o", output)
 
+	c.Arg("-", "")
 	if c.output != nil {
 		c.SetStdOut(c.output)
 	}
