@@ -40,6 +40,15 @@ func (c *IWebP) Input(reader, reader2 io.Reader) *IWebP {
 	return c
 }
 
+// InputFile sets image file to convert.
+// Input or InputImage called before will be ignored.
+func (c *IWebP) InputFile(file, file2 string) *IWebP {
+	c.input = nil
+	c.inputFile = file
+	c.inputFile2 = file2
+	return c
+}
+
 // Output specify writer to write webp file content.
 // OutputFile called before will be ignored.
 func (c *IWebP) Output(writer io.Writer) *IWebP {
