@@ -16,12 +16,12 @@ type IWebP struct {
 	output io.Writer
 }
 
-// NewCWebP creates new GWebP instance.
+// NewIWebP creates new GWebP instance.
 func NewIWebP(optionFuncs ...OptionFunc) *IWebP {
 	bin := &IWebP{
 		BinWrapper: createBinWrapper(optionFuncs...),
 	}
-	bin.ExecPath("gif2webp")
+	bin.ExecPath("img2webp")
 
 	return bin
 }
