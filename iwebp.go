@@ -12,6 +12,7 @@ import (
 type IWebP struct {
 	*binwrapper.BinWrapper
 	input  io.Reader
+	input2  io.Reader
 	inputFile  string
 	inputFile2  string
 	output io.Writer
@@ -36,6 +37,7 @@ func (c *IWebP) Version() (string, error) {
 // InputFile or InputImage called before will be ignored.
 func (c *IWebP) Input(reader, reader2 io.Reader) *IWebP {
 	c.input = reader
+	c.input2 = reader2
 	return c
 }
 
@@ -43,6 +45,7 @@ func (c *IWebP) Input(reader, reader2 io.Reader) *IWebP {
 // Input or InputImage called before will be ignored.
 func (c *IWebP) InputFile(file, file2 string) *IWebP {
 	c.input = nil
+	c.input2 = nil
 	c.inputFile = file
 	c.inputFile2 = file2
 	return c
@@ -91,6 +94,11 @@ func (c *IWebP) setInput() error {
 		c.Arg("-d").Arg("5000")
 		c.Arg("--").Arg("-")
 		c.StdIn(c.input)
+		if c.input2 != nil {
+			c.Arg("-d").Arg("3000")
+			c.Arg("--").Arg("-")
+			c.StdIn(c.input2)
+		}
 	} else if c.inputFile != "" {
 		c.Arg("-d").Arg("5000")
 		c.Arg(c.inputFile)
