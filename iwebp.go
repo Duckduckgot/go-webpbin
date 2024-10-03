@@ -58,7 +58,7 @@ func (c *IWebP) Output(writer io.Writer) *IWebP {
 func (c *IWebP) Run() error {
 	defer c.BinWrapper.Reset()
 
-	output, err := c.getOutput()
+	// output, err := c.getOutput()
 
 	if err != nil {
 		return err
@@ -72,7 +72,7 @@ func (c *IWebP) Run() error {
 		return err
 	}
 
-	c.Arg("-o", output)
+	// c.Arg("-o", output)
 
 	if c.output != nil {
 		c.SetStdOut(c.output)
