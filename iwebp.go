@@ -17,7 +17,7 @@ type IWebP struct {
 }
 
 // NewCWebP creates new GWebP instance.
-func NewGWebP(optionFuncs ...OptionFunc) *IWebP {
+func NewIWebP(optionFuncs ...OptionFunc) *IWebP {
 	bin := &IWebP{
 		BinWrapper: createBinWrapper(optionFuncs...),
 	}
