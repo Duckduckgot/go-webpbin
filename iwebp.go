@@ -58,23 +58,21 @@ func (c *IWebP) Output(writer io.Writer) *IWebP {
 func (c *IWebP) Run() error {
 	defer c.BinWrapper.Reset()
 
-	// output, err := c.getOutput()
-
-	// if err != nil {
-	// 	return err
-	// }
-
-	c.Arg("-loop", "0").Arg("-lossy")
-
-	err := c.setInput()
+	output, err := c.getOutput()
 
 	if err != nil {
 		return err
 	}
 
-	// c.Arg("-o", output)
+	c.Arg("-loop", "0").Arg("-lossy")
 
-	c.Arg("-")
+	err = c.setInput()
+
+	if err != nil {
+		return err
+	}
+
+	c.Arg("-o", output)
 	if c.output != nil {
 		c.SetStdOut(c.output)
 	}
