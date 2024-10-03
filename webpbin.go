@@ -10,12 +10,12 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/nickalie/go-binwrapper"
+	"github.com/Duckduckgot/go-binwrapper"
 )
 
 var skipDownload bool
-var dest = "/home/wabot/libwebp-1.2.4-linux-x86-64/bin"
-var libwebpVersion = "1.2.0"
+var dest = "~/libwebp-1.3.0-linux-x86-64/bin"
+var libwebpVersion = "1.3.0"
 
 type OptionFunc func(binWrapper *binwrapper.BinWrapper) error
 
