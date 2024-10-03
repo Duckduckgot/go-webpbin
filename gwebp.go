@@ -4,7 +4,7 @@ import (
 	"errors"
 	"io"
 
-	"github.com/nickalie/go-binwrapper"
+	"github.com/Duckduckgot/go-binwrapper"
 )
 
 // GWebP compresses an image using the WebP format. Input format can be either PNG, JPEG, TIFF, WebP or raw Y'CbCr samples.
