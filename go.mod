@@ -6,7 +6,7 @@ require (
 	github.com/dsnet/compress v0.0.1 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/mholt/archiver v3.1.1+incompatible // indirect
-	github.com/nickalie/go-binwrapper v0.0.0-20190114141239-525121d43c84
+	github.com/Duckduckgot/go-binwrapper v0.0.0-20190114141239-525121d43c84
 	github.com/nwaples/rardecode v1.1.0 // indirect
 	github.com/pierrec/lz4 v2.6.1+incompatible // indirect
 	github.com/stretchr/testify v1.7.0
