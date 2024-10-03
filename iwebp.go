@@ -95,8 +95,10 @@ func (c *IWebP) setInput() error {
 	} else if c.inputFile != "" {
 		c.Arg("-d").Arg("5000")
 		c.Arg(c.inputFile)
-		c.Arg("-d").Arg("3000")
-		c.Arg(c.inputFile2)
+		if c.inputFile2 != "" {
+			c.Arg("-d").Arg("3000")
+			c.Arg(c.inputFile2)
+		}
 	} else {
 		return errors.New("Undefined input")
 	}
