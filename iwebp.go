@@ -60,13 +60,13 @@ func (c *IWebP) Run() error {
 
 	// output, err := c.getOutput()
 
-	if err != nil {
-		return err
-	}
+	// if err != nil {
+	// 	return err
+	// }
 
 	c.Arg("-loop", "0").Arg("-lossy")
 
-	err = c.setInput()
+	err := c.setInput()
 
 	if err != nil {
 		return err
